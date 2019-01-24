@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
+	_"fmt"
 	"log"
 	"net/http"
+	"go_study/gopl/cp-1"
 )
 
 func main()  {
@@ -12,5 +13,6 @@ func main()  {
 }
 
 func handler(w http.ResponseWriter,r *http.Request) {
-	fmt.Fprintf(w,"URL.Path = %q\n",r.URL.Path)
+	log.Fprintf(w,"URL.Path = %q\n",r.URL.Path)
+	lissajous(w)
 }
